@@ -1,0 +1,179 @@
+/* Basic Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Mobile First - Base Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  line-height: 1.5;
+  height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area that grows to push footer down */
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Force theme styles with higher specificity */
+html.dark-theme,
+html.dark-theme body,
+.app.dark-theme {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+}
+
+html.light-theme,
+html.light-theme body,
+.app.light-theme {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #0f172a;
+}
+
+/* Ant Design Global Overrides for Dark Theme */
+.dark-theme .ant-input-affix-wrapper {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.dark-theme .ant-input-affix-wrapper:hover,
+.dark-theme .ant-input-affix-wrapper:focus,
+.dark-theme .ant-input-affix-wrapper-focused {
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2);
+}
+
+.dark-theme .ant-input-affix-wrapper input {
+  background: transparent;
+  color: #ffffff;
+}
+
+.dark-theme .ant-input-affix-wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Ant Design Global Overrides for Light Theme */
+.light-theme .ant-input-affix-wrapper {
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.light-theme .ant-input-affix-wrapper:hover,
+.light-theme .ant-input-affix-wrapper:focus,
+.light-theme .ant-input-affix-wrapper-focused {
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2);
+}
+
+.light-theme .ant-input-affix-wrapper input {
+  background: transparent;
+  color: #0f172a;
+}
+
+.light-theme .ant-input-affix-wrapper input::placeholder {
+  color: rgba(15, 23, 42, 0.5);
+}
+
+/* Force Ant Design light theme overrides */
+.light-theme .ant-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  color: #0f172a;
+}
+
+.light-theme .ant-btn {
+  color: #0f172a;
+}
+
+.light-theme .ant-btn-text {
+  color: #0f172a;
+}
+
+.light-theme .ant-btn-text:hover {
+  color: #0f172a;
+}
+
+.light-theme .ant-typography {
+  color: #0f172a;
+}
+
+.light-theme .ant-form-item-label > label {
+  color: #0f172a;
+}
+
+.ant-form-item-explain-error {
+  color: #ef4444;
+}
+
+.ant-form-item-has-error .ant-input-affix-wrapper {
+  border-color: #ef4444;
+}
+
+.ant-form-item-has-error .ant-input-affix-wrapper:hover,
+.ant-form-item-has-error .ant-input-affix-wrapper:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+/* Typography overrides */
+.dark-theme .ant-typography {
+  color: #ffffff;
+}
+
+.light-theme .ant-typography {
+  color: #0f172a;
+}
+
+.dark-theme .ant-typography.ant-typography-secondary {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.light-theme .ant-typography.ant-typography-secondary {
+  color: rgba(15, 23, 42, 0.8);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
