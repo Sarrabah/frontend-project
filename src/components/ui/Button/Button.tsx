@@ -5,13 +5,11 @@ import "./Button.module.css"
 
 export interface ButtonProps extends Omit<AntButtonProps, "type" | "variant"> {
   variant?: "primary" | "outline" | "ghost"
-  theme?: "light" | "dark"
   children: React.ReactNode
 }
 
 export const Button: React.FC<ButtonProps> = ({
   variant = "primary",
-  theme = "dark",
   className = "",
   children,
   ...props
@@ -19,9 +17,8 @@ export const Button: React.FC<ButtonProps> = ({
   const getButtonClass = () => {
     const baseClass = "custom-button"
     const variantClass = `custom-button--${variant}`
-    const themeClass = `custom-button--${theme}`
 
-    return `${baseClass} ${variantClass} ${themeClass} ${className}`.trim()
+    return `${baseClass} ${variantClass} ${className}`.trim()
   }
 
   const getAntType = (): AntButtonProps["type"] => {

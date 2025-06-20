@@ -4,21 +4,18 @@ import type { InputProps as AntInputProps, PasswordProps } from "antd/es/input"
 import "./Input.module.css"
 
 export interface InputProps extends AntInputProps {
-  theme?: "light" | "dark"
   label?: string
   error?: string
   helperText?: string
 }
 
 export interface InputPasswordProps extends PasswordProps {
-  theme?: "light" | "dark"
   label?: string
   error?: string
   helperText?: string
 }
 
 const InputComponent: React.FC<InputProps> = ({
-  theme = "dark",
   label,
   error,
   helperText,
@@ -27,24 +24,22 @@ const InputComponent: React.FC<InputProps> = ({
 }) => {
   const getInputClass = () => {
     const baseClass = "custom-input"
-    const themeClass = `custom-input--${theme}`
     const errorClass = error ? "custom-input--error" : ""
 
-    return `${baseClass} ${themeClass} ${errorClass} ${className}`.trim()
+    return `${baseClass} ${errorClass} ${className}`.trim()
   }
 
   return (
     <div className="custom-input-wrapper">
-      {label && <label className={`custom-input-label custom-input-label--${theme}`}>{label}</label>}
+      {label && <label className={`custom-input-label custom-input-label`}>{label}</label>}
       <AntInput className={getInputClass()} status={error ? "error" : undefined} {...props} />
       {error && <div className="custom-input-error">{error}</div>}
-      {helperText && !error && <div className={`custom-input-helper custom-input-helper--${theme}`}>{helperText}</div>}
+      {helperText && !error && <div className={`custom-input-helper custom-input-helper`}>{helperText}</div>}
     </div>
   )
 }
 
 const InputPassword: React.FC<InputPasswordProps> = ({
-  theme = "dark",
   label,
   error,
   helperText,
@@ -53,18 +48,17 @@ const InputPassword: React.FC<InputPasswordProps> = ({
 }) => {
   const getInputClass = () => {
     const baseClass = "custom-input"
-    const themeClass = `custom-input--${theme}`
     const errorClass = error ? "custom-input--error" : ""
 
-    return `${baseClass} ${themeClass} ${errorClass} ${className}`.trim()
+    return `${baseClass} ${errorClass} ${className}`.trim()
   }
 
   return (
     <div className="custom-input-wrapper">
-      {label && <label className={`custom-input-label custom-input-label--${theme}`}>{label}</label>}
+      {label && <label className={`custom-input-label custom-input-label`}>{label}</label>}
       <AntInput.Password className={getInputClass()} status={error ? "error" : undefined} {...props} />
       {error && <div className="custom-input-error">{error}</div>}
-      {helperText && !error && <div className={`custom-input-helper custom-input-helper--${theme}`}>{helperText}</div>}
+      {helperText && !error && <div className={`custom-input-helper custom-input-helper`}>{helperText}</div>}
     </div>
   )
 }

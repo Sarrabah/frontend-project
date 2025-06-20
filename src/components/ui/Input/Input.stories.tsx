@@ -18,11 +18,6 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {
-    theme: {
-      control: "select",
-      options: ["light", "dark"],
-      description: "Thème de l'input",
-    },
     size: {
       control: "select",
       options: ["small", "middle", "large"],
@@ -51,7 +46,6 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     placeholder: "Enter your name",
-    theme: "dark",
   },
 }
 
@@ -59,7 +53,6 @@ export const WithLabel: Story = {
   args: {
     label: "Name",
     placeholder: "Enter your name",
-    theme: "dark",
   },
 }
 
@@ -68,7 +61,6 @@ export const WithIcon: Story = {
     label: "Name",
     placeholder: "Enter your name",
     prefix: <UserOutlined />,
-    theme: "dark",
   },
 }
 
@@ -78,7 +70,6 @@ export const Email: Story = {
     placeholder: "Enter your email",
     prefix: <MailOutlined />,
     type: "email",
-    theme: "dark",
   },
 }
 
@@ -87,7 +78,6 @@ export const Password: Story = {
     label: "Password",
     placeholder: "Enter your password",
     prefix: <LockOutlined />,
-    theme: "dark",
   },
   render: (args) => <Input.Password {...args} />,
 }
@@ -98,7 +88,6 @@ export const WithError: Story = {
     placeholder: "Enter your email",
     prefix: <MailOutlined />,
     error: "Please enter a valid email address",
-    theme: "dark",
   },
 }
 
@@ -108,19 +97,6 @@ export const WithHelperText: Story = {
     placeholder: "Enter your password",
     prefix: <LockOutlined />,
     helperText: "Password must be at least 8 characters",
-    theme: "dark",
-  },
-}
-
-export const LightTheme: Story = {
-  args: {
-    label: "Name",
-    placeholder: "Enter your name",
-    prefix: <UserOutlined />,
-    theme: "light",
-  },
-  parameters: {
-    backgrounds: { default: "light" },
   },
 }
 
@@ -129,13 +105,11 @@ export const Disabled: Story = {
     label: "Name",
     placeholder: "Enter your name",
     disabled: true,
-    theme: "dark",
   },
 }
 
 export const Sizes: Story = {
   args: {
-    theme: "dark",
   },
   render: (args) => (
     <div style={{ display: "flex", flexDirection: "column", gap: "16px", width: "300px" }}>
@@ -146,15 +120,3 @@ export const Sizes: Story = {
   ),
 }
 
-export const FormExample: Story = {
-  args: {
-    theme: "dark",
-  },
-  render: (args) => (
-    <div style={{ width: "300px", display: "flex", flexDirection: "column", gap: "16px" }}>
-      <Input {...args} label="Name" placeholder="Enter your name" prefix={<UserOutlined />} />
-      <Input {...args} label="Email address" placeholder="Enter your email" prefix={<MailOutlined />} type="email" />
-      <Input.Password {...args} label="Password" placeholder="Enter your password" prefix={<LockOutlined />} />
-    </div>
-  ),
-}
