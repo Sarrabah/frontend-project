@@ -1,8 +1,7 @@
 "use client"
 
 import React from "react"
-import { Typography, Row, Col, Space } from "antd"
-import { Button } from "./ui/Button"
+import { Typography, Row, Col, Space, Button } from "antd"
 import "../styles/description.css"
 
 const { Title, Paragraph } = Typography
@@ -26,10 +25,10 @@ const Description: React.FC<DescriptionProps> = ({ onSignInClick, onSignUpClick 
               quotes and quote requests between interior architects and hardware stores or craftsmen.
             </Paragraph>
             <Space size="large" className="description-actions">
-              <Button  variant="primary" size="large" onClick={onSignInClick}>
+              <Button size="large" onClick={onSignInClick}>
                 Sign in
               </Button>
-              <Button variant="primary" size="large" onClick={onSignUpClick}>
+              <Button size="large" onClick={onSignUpClick}>
                 Sign up
               </Button>
             </Space>
