@@ -1,5 +1,10 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+
+# Sitemap (remplacez par votre domaine)
+Sitemap: https://frontend-project-ja75fv6di-sarrabenarbia1996-4752s-projects.vercel.app/sitemap.xml
+
+# Bloquer uniquement les dossiers nécessaires
 Disallow: /api/
-Disallow: /_vercel/
+Disallow: /_next/
+Disallow: /admin/
