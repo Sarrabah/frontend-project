@@ -1,102 +1,42 @@
 /* Mobile First - Description Section */
 .description-section {
-  padding: 24px 16px;
-  max-width: 1200px;
+  padding: 1.5rem 1rem;
+  max-width: 75rem;
   margin: 0 auto;
-  flex: 1; /* This makes the Description section grow to fill available space */
+  flex: 1;
   display: flex;
   align-items: center;
 }
 
 .description-content {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .description-title {
-  font-size: 24px !important;
-  font-weight: 700 !important;
-  line-height: 1.2 !important;
-  margin-bottom: 16px !important;
-  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  transition: var(--description-transition);
 }
 
-.dark-theme .description-title {
-  color: #ffffff !important;
+.description-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  transition: var(--description-transition);
+  padding: 0 0.5rem;
 }
 
-.light-theme .description-title {
-  color: #0f172a !important;
+.description-actions {
+  width: 100%;
+  justify-content: center;
 }
 
-.description-description {
-  font-size: 14px !important;
-  line-height: 1.5 !important;
-  margin-bottom: 24px !important;
-  transition: all 0.3s ease;
-  padding: 0 8px;
-}
-
-.dark-theme .description-description {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-.light-theme .description-description {
-  color: rgba(15, 23, 42, 0.8) !important;
-}
-
-/* CTA Buttons */
-.cta-btn-outline {
-  background: transparent !important;
-  border-radius: 10px !important;
-  padding: 12px 20px !important;
-  height: auto !important;
-  font-weight: 600 !important;
-  transition: all 0.3s ease;
-  font-size: 14px;
-}
-
-.dark-theme .cta-btn-outline {
-  border: 2px solid rgba(255, 255, 255, 0.3) !important;
-  color: #ffffff !important;
-}
-
-.dark-theme .cta-btn-outline:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
-  color: #ffffff !important;
-}
-
-.light-theme .cta-btn-outline {
-  border: 2px solid rgba(15, 23, 42, 0.4) !important;
-  color: #0f172a !important;
-  background: rgba(255, 255, 255, 0.8) !important;
-}
-
-.light-theme .cta-btn-outline:hover {
-  background: rgba(15, 23, 42, 0.1) !important;
-  border-color: rgba(15, 23, 42, 0.6) !important;
-  color: #0f172a !important;
-}
-
-.cta-btn-primary {
-  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%) !important;
-  border: none !important;
-  border-radius: 10px !important;
-  padding: 12px 20px !important;
-  height: auto !important;
-  font-weight: 600 !important;
-  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.3);
-  transition: all 0.3s ease;
-  color: white !important;
-  font-size: 14px;
-}
-
-.cta-btn-primary:hover {
-  background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(6, 182, 212, 0.4);
-  color: white !important;
+.description-actions .ant-space-item {
+  width: 100%;
+  max-width: 17.5rem;
 }
 
 /* Description Illustration */
@@ -105,82 +45,127 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 
-.description-illustration img {
+.description-image {
   max-width: 100%;
   height: auto;
-  max-height: 300px;
-  transition: all 0.3s ease;
+  max-height: 18.75rem;
+  transition: var(--description-transition);
+  border-radius: var(--description-border-radius);
 }
 
-.dark-theme .description-illustration img {
-  filter: brightness(1.1) contrast(1.1);
-}
-
-.light-theme .description-illustration img {
-  filter: brightness(0.9) contrast(1.2);
-}
-
-/* Tablet */
-@media (min-width: 768px) {
+/* Tablet - 768px+ */
+@media (min-width: 48rem) {
   .description-section {
-    padding: 48px 24px;
+    padding: 3rem 1.5rem;
   }
 
   .description-title {
-    font-size: 32px !important;
-    margin-bottom: 20px !important;
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
   }
 
-  .description-description {
-    font-size: 16px !important;
-    margin-bottom: 32px !important;
-    padding: 0 16px;
+  .description-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
   }
 
-  .description-illustration img {
-    max-height: 400px;
+  .description-image {
+    max-height: 25rem;
   }
 
-  .cta-btn-outline,
-  .cta-btn-primary {
-    padding: 12px 24px !important;
-    font-size: 15px;
+  .description-actions .ant-space-item {
+    width: auto;
   }
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
+/* Desktop - 1024px+ */
+@media (min-width: 64rem) {
   .description-section {
-    padding: 64px 24px;
+    padding: 4rem 1.5rem;
   }
 
   .description-content {
     text-align: left;
-    padding-right: 40px;
+    padding-right: 2.5rem;
     margin-bottom: 0;
   }
 
   .description-title {
-    font-size: 42px !important;
-    margin-bottom: 24px !important;
+    font-size: 2.625rem;
+    margin-bottom: 1.5rem;
   }
 
-  .description-description {
-    font-size: 17px !important;
-    margin-bottom: 36px !important;
+  .description-text {
+    font-size: 1.0625rem;
+    margin-bottom: 2.25rem;
     padding: 0;
   }
 
-  .description-illustration img {
-    max-height: 500px;
+  .description-image {
+    max-height: 31.25rem;
   }
 
-  .cta-btn-outline,
-  .cta-btn-primary {
-    padding: 12px 32px !important;
-    font-size: 16px;
+  .description-actions {
+    justify-content: flex-start;
+  }
+}
+
+/* Large Desktop - 1440px+ */
+@media (min-width: 90rem) {
+  .description-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .description-title {
+    font-size: 3rem;
+  }
+
+  .description-text {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .description-image {
+    max-height: 37.5rem;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .description-title,
+  .description-text,
+  .description-image {
+    transition: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .description-title {
+    font-weight: 800;
+  }
+
+  .description-text {
+    font-weight: 500;
+  }
+}
+
+/* Print styles */
+@media print {
+  .description-section {
+    padding: 1rem;
+  }
+
+  .description-actions {
+    display: none;
+  }
+
+  .description-image {
+    max-height: 15rem;
+    filter: none;
   }
 }
