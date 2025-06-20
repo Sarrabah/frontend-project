@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/react-webpack5": "^9.0.12",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -21,12 +22,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -43,8 +47,14 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^7.0.2",
+    "@storybook/addon-docs": "^9.0.12",
+    "@storybook/preset-create-react-app": "^9.0.12",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "purgecss": "^7.0.2"
+    "eslint-plugin-storybook": "^9.0.12",
+    "prop-types": "^15.8.1",
+    "purgecss": "^7.0.2",
+    "storybook": "^9.0.12",
+    "webpack": "^5.99.9"
   }
 }
