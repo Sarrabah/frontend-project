@@ -1,0 +1,42 @@
+.Input_custom-input-wrapper__o7Pe- {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.Input_custom-input-label__DHw6J {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.Input_custom-input__qNC58 {
+  border-radius: 10px !important;
+  padding: 14px 16px !important;
+  height: auto !important;
+  transition: all 0.3s ease;
+  font-size: 15px !important;
+  border-width: 2px !important;
+}
+
+/* Error State */
+.Input_custom-input--error__-cJ6k {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+}
+
+.Input_custom-input-error__qchOh {
+  color: #ef4444;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.Input_custom-input-helper__yBNHx {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+
+/*# sourceMappingURL=components-ui-Input-Input-stories.37ad9e74.chunk.css.map*/
