@@ -1,19 +1,19 @@
-/* Mobile First - Hero Section */
-.hero-section {
+/* Mobile First - Description Section */
+.description-section {
   padding: 24px 16px;
   max-width: 1200px;
   margin: 0 auto;
-  flex: 1; /* This makes the hero section grow to fill available space */
+  flex: 1; /* This makes the Description section grow to fill available space */
   display: flex;
   align-items: center;
 }
 
-.hero-content {
+.description-content {
   text-align: center;
   margin-bottom: 32px;
 }
 
-.hero-title {
+.description-title {
   font-size: 24px !important;
   font-weight: 700 !important;
   line-height: 1.2 !important;
@@ -21,15 +21,15 @@
   transition: all 0.3s ease;
 }
 
-.dark-theme .hero-title {
+.dark-theme .description-title {
   color: #ffffff !important;
 }
 
-.light-theme .hero-title {
+.light-theme .description-title {
   color: #0f172a !important;
 }
 
-.hero-description {
+.description-description {
   font-size: 14px !important;
   line-height: 1.5 !important;
   margin-bottom: 24px !important;
@@ -37,11 +37,11 @@
   padding: 0 8px;
 }
 
-.dark-theme .hero-description {
+.dark-theme .description-description {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
-.light-theme .hero-description {
+.light-theme .description-description {
   color: rgba(15, 23, 42, 0.8) !important;
 }
 
@@ -100,7 +100,7 @@
 }
 
 /* Hero Illustration */
-.hero-illustration {
+.description-illustration {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,39 +108,39 @@
   margin-top: 16px;
 }
 
-.hero-illustration img {
+.description-illustration img {
   max-width: 100%;
   height: auto;
   max-height: 300px;
   transition: all 0.3s ease;
 }
 
-.dark-theme .hero-illustration img {
+.dark-theme .description-illustration img {
   filter: brightness(1.1) contrast(1.1);
 }
 
-.light-theme .hero-illustration img {
+.light-theme .description-illustration img {
   filter: brightness(0.9) contrast(1.2);
 }
 
 /* Tablet */
 @media (min-width: 768px) {
-  .hero-section {
+  .description-section {
     padding: 48px 24px;
   }
 
-  .hero-title {
+  .description-title {
     font-size: 32px !important;
     margin-bottom: 20px !important;
   }
 
-  .hero-description {
+  .description-description {
     font-size: 16px !important;
     margin-bottom: 32px !important;
     padding: 0 16px;
   }
 
-  .hero-illustration img {
+  .description-illustration img {
     max-height: 400px;
   }
 
@@ -153,28 +153,28 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .hero-section {
+  .description-section {
     padding: 64px 24px;
   }
 
-  .hero-content {
+  .description-content {
     text-align: left;
     padding-right: 40px;
     margin-bottom: 0;
   }
 
-  .hero-title {
+  .description-title {
     font-size: 42px !important;
     margin-bottom: 24px !important;
   }
 
-  .hero-description {
+  .description-description {
     font-size: 17px !important;
     margin-bottom: 36px !important;
     padding: 0;
   }
 
-  .hero-illustration img {
+  .description-illustration img {
     max-height: 500px;
   }
 

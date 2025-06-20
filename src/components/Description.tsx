@@ -6,21 +6,21 @@ import "../styles/Description.css"
 
 const { Title, Paragraph } = Typography
 
-interface HeroProps {
+interface DescriptionProps {
   onSignInClick?: () => void
   onSignUpClick?: () => void
 }
 
-const Description: React.FC<HeroProps> = ({ onSignInClick, onSignUpClick }) => {
+const Description: React.FC<DescriptionProps> = ({ onSignInClick, onSignUpClick }) => {
   return (
-    <section className="hero-section">
+    <section className="description-section">
       <Row gutter={[48, 48]} align="middle">
         <Col xs={24} lg={12}>
-          <div className="hero-content">
-            <Title level={1} className="hero-title">
+          <div className="description-content">
+            <Title level={1} className="description-title">
               Simplify Quote Management for Interior Architects
             </Title>
-            <Paragraph className="hero-description">
+            <Paragraph className="description-description">
               Art Crea Pro is a platform for building and construction professionals, streamlining the management of
               quotes and quote requests between interior architects and hardware stores or craftsmen.
             </Paragraph>
@@ -35,7 +35,7 @@ const Description: React.FC<HeroProps> = ({ onSignInClick, onSignUpClick }) => {
           </div>
         </Col>
         <Col xs={24} lg={12}>
-          <div className="hero-illustration">
+          <div className="description-illustration">
             <img src="/building.svg" alt="building logo" width="800" height="400" loading="eager"/>
           </div>
         </Col>
