@@ -3,19 +3,13 @@
 import type React from "react"
 import { Button, Form, Input, Typography, Row, Col, Card, message } from "antd"
 import { UserOutlined, LockOutlined, MailOutlined} from "@ant-design/icons"
-import type { SignInFormData, SignUpFormData } from "../types/user"
+import type { SignFormsProps, SignInFormData, SignUpFormData } from "../types/types"
 import { validateEmail, validatePassword } from "../utils/validators"
 import "../styles/signForms.css"
 
 const { Title } = Typography
 
-interface SignFormsProps {
-  activeForm: "signin" | "signup"
-  onFormChange: (form: "signin" | "signup" | null) => void
-  onCloseForm: () => void
-}
-
-const SignForms: React.FC<SignFormsProps> = ({ activeForm, onFormChange, onCloseForm }) => {
+const SignForms: React.FC<SignFormsProps> = ({ activeForm, onFormChange }) => {
   const [signInForm] = Form.useForm()
   const [signUpForm] = Form.useForm()
 
