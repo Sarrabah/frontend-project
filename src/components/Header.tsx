@@ -4,7 +4,7 @@ import React from "react"
 import { Button, Typography, Space } from "antd"
 import { SunOutlined, MoonOutlined } from "@ant-design/icons"
 import { useTheme } from "../hooks/useTheme"
-import "../styles/Header.css"
+import "../styles/header.css"
 
 const { Title } = Typography
 
@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ onSignInClick, onSignUpClick }) => {
     <header className="header">
       <div className="header-content">
         <Title level={2} className="logo">
-          ART CRÉA PRO
+          Art Créa Pro
         </Title>
         <Space size="middle">
           <Button
@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ onSignInClick, onSignUpClick }) => {
             onClick={toggleTheme}
             icon={isDark ? <SunOutlined /> : <MoonOutlined />}
             title={isDark ? "Switch to light mode" : "Switch to dark mode"}
-            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"} 
+            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
           />
         </Space>
       </div>
@@ -37,6 +37,4 @@ const Header: React.FC<HeaderProps> = ({ onSignInClick, onSignUpClick }) => {
   )
 }
 
-export default React.memo(Header);
-
-//export default Header
+export default React.memo(Header)

@@ -3,7 +3,7 @@
 import React from "react"
 import { Typography, Row, Col, Space } from "antd"
 import { Button } from "./ui/Button"
-import "../styles/Description.css"
+import "../styles/description.css"
 
 const { Title, Paragraph } = Typography
 

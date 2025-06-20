@@ -5,7 +5,7 @@ import { Button, Form, Input, Typography, Row, Col, Card, message } from "antd"
 import { UserOutlined, LockOutlined, MailOutlined} from "@ant-design/icons"
 import type { SignInFormData, SignUpFormData } from "../types/user"
 import { validateEmail, validatePassword } from "../utils/validators"
-import "../styles/SignForms.css"
+import "../styles/signForms.css"
 
 const { Title } = Typography
 

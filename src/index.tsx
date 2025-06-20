@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import 'antd/dist/reset.css'; // Importer le CSS de Ant Design
-import './styles/App.css'; // Importer tes propres styles
+import 'antd/dist/reset.css'; 
+import './styles/app.css'; 
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

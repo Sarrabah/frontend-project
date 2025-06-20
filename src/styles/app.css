@@ -36,24 +36,15 @@ body {
   flex-direction: column;
 }
 
-/* Main content area that grows to push footer down */
-.app-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
 /* Force theme styles with higher specificity */
 html.dark-theme,
-html.dark-theme body,
-.app.dark-theme {
+html.dark-theme body {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: #ffffff;
 }
 
 html.light-theme,
-html.light-theme body,
-.app.light-theme {
+html.light-theme body {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   color: #0f172a;
 }
@@ -113,15 +104,7 @@ html.light-theme body,
   color: #0f172a;
 }
 
-.light-theme .ant-btn {
-  color: #0f172a;
-}
-
 .light-theme .ant-btn-text {
-  color: #0f172a;
-}
-
-.light-theme .ant-btn-text:hover {
   color: #0f172a;
 }
 
@@ -148,14 +131,6 @@ html.light-theme body,
 }
 
 /* Typography overrides */
-.dark-theme .ant-typography {
-  color: #ffffff;
-}
-
-.light-theme .ant-typography {
-  color: #0f172a;
-}
-
 .dark-theme .ant-typography.ant-typography-secondary {
   color: rgba(255, 255, 255, 0.8);
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import { Typography } from "antd"
-import "../styles/Footer.css"
+import "../styles/footer.css"
 
 const { Text } = Typography
 
@@ -13,5 +13,3 @@ const Footer: React.FC = () => {
 }
 
 export default React.memo(Footer);
-
-//export default Footer

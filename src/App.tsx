@@ -5,10 +5,9 @@ import { lazy, Suspense, useState} from "react"
 import { ConfigProvider, theme } from "antd"
 import Header from "./components/Header"
 import Description from "./components/Description"
-//import SignForms from "./components/SignForms"
 import Footer from "./components/Footer"
-import { useTheme } from "./hooks/useTheme" // Make sure this path is correct
-import "./styles/App.css" // Keep this for global styles and CSS variables
+import { useTheme } from "./hooks/useTheme"
+import "./styles/app.css" 
 
 const SignForms = lazy(() => import("./components/SignForms"));
 
